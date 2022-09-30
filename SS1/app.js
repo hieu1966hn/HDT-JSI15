@@ -57,3 +57,19 @@ Khai báo biến: let, var, const (khai báo hằng số => không thể thay đ
 // let arr = [1, 2, 3, null, 4, 5, 6];
 // console.log("arr: ", arr);
 
+
+////// Toán tử số học: 
+console.log(
+  4 / 3
+); //// => 1.3333
+
+console.log(4 % 3); //// =>  1
+
+///// Toán tử so sánh
+console.log(
+  1 == "1"
+);// => true (chỉ so sánh về giá trị)
+
+console.log(
+  1 === "1"
+);// => False (So sánh cả về giá trị và kiểu dữ liệu)
