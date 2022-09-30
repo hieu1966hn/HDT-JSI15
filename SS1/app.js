@@ -59,17 +59,31 @@ Khai báo biến: let, var, const (khai báo hằng số => không thể thay đ
 
 
 ////// Toán tử số học: 
-console.log(
-  4 / 3
-); //// => 1.3333
+// console.log(
+//   4 / 3
+// ); //// => 1.3333
 
-console.log(4 % 3); //// =>  1
+// console.log(4 % 3); //// =>  1
 
-///// Toán tử so sánh
-console.log(
-  1 == "1"
-);// => true (chỉ so sánh về giá trị)
+// ///// Toán tử so sánh
+// console.log(
+//   1 == "1"
+// );// => true (chỉ so sánh về giá trị)
 
-console.log(
-  1 === "1"
-);// => False (So sánh cả về giá trị và kiểu dữ liệu)
+// console.log(
+//   1 === "1"
+// );// => False (So sánh cả về giá trị và kiểu dữ liệu)
+
+
+
+///// Toán tử logic: 
+
+// &&: Dùng để lọc ra các điều kiện đúng (Nếu như có đk sai => kết quả trả về là: false)
+// console.log(
+//   4 > 3 && 5 > 4 && 1 < 1
+// );
+
+// ||: Dùng để lọc ra các điều kiện sai (Nếu như có đk đúng => kết quả trả về là: true)
+// console.log(
+//   3 * 4 == 12 || 1 / 2 == 0 || 2 > 10
+// );
