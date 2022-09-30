@@ -1,7 +1,7 @@
 /*
 HTML: Ngôn ngữ đánh dấu siêu văn bản => trình bày văn bản/nội dung trên web
 CSS: nn trang trí => Cho HTML
-Javascript: nn lập trình 
+Javascript: nn lập trình
 => lý do: Nó có thể làm được rất nhiều tính năng xử lý logic, hoặc thao tác với HTML, CSS
 
 Kiểu dữ liệu cơ bản trong JS:
@@ -12,7 +12,7 @@ Kiểu dữ liệu cơ bản trong JS:
 5. undefinded: Không xác định (let a;)
 6. null: Rỗng (Bài toán chủ nhà trọ ....)
 
-Toán tử: 
+Toán tử:
 1. Toán tử gán: =
 2. Toán tử số học: +,-,*,/,% (chia lấy dư)
 3. Toán tử so sánh: >,<,>=, <=, == (So sánh tương đối), === (so sánh tuyệt đối)
@@ -26,7 +26,34 @@ Khai báo biến: let, var, const (khai báo hằng số => không thể thay đ
 
 ////Kiểu dữ liệu
 
-// String
-let a = "Hello";
-let b = 'Hello';
-let c = `Hello`;
+///// String
+// let a = "Hello";
+// let b = 'Hello';
+// let c = `Hello`;
+
+
+///// Number
+// let a = 123;
+
+
+///// Boolean:
+// let a = true;
+// let b = false;
+
+
+///// Object
+// let obj = {
+//   name: "Hiếu",
+//   age: 24,
+// }
+
+
+//// Undefinded
+// let a;
+// console.log("a: ", a); /// KDL undefinded
+
+
+//// null
+// let arr = [1, 2, 3, null, 4, 5, 6];
+// console.log("arr: ", arr);
+
