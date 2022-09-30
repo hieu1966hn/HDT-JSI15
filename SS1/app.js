@@ -150,25 +150,40 @@ VD: In ra các số từ 1 -> 10
 
 ////// Mảng: Array là danh sách các phần tử trong đó các phần tử có thể là bất cứ KDL nào
 /// khai báo mảng rỗng
-let animals = ["dog", 'cat', `mouse`, "chicken"];
+// let animals = ["dog", 'cat', `mouse`, "chicken"];
 
-//// Nhắc tới mảng => C,R,U,D với mảng
+// //// Nhắc tới mảng => C,R,U,D với mảng
 
-// C: Creat Thêm phần tử vào trong mảng arr.push();
-animals.push("snake", "monkey");
-
-
-
-/// R: Read duyệt mảng => dùng lệnh console.log()
-console.log(animals);
+// // C: Creat Thêm phần tử vào trong mảng arr.push();
+// animals.push("snake", "monkey");
 
 
-/// Update: Đổi snake => fish
-animals[4] = "fish"
-console.log(animals);
 
-/// Delete: xóa "mouse" (splice)
-animals.splice(2, 1)// xóa 1 phần tử ở vị trí số 2
-console.log(animals);
+// /// R: Read duyệt mảng => dùng lệnh console.log()
+// console.log(animals);
 
+
+// /// Update: Đổi snake => fish
+// animals[4] = "fish"
+// console.log(animals);
+
+// /// Delete: xóa "mouse" (splice)
+// animals.splice(2, 1)// xóa 1 phần tử ở vị trí số 2
+// console.log(animals);
+
+
+
+/*
+Đề bài: Xây dưng menu món ăn nhà hàng (array) thỏa mãn điều kiện sau:
+1. Người dùng vào trang web sẽ được chọn 1 trong 4 yêu cầu: C,R,U,D
+2. C: Hiển thị thông báo cho người dùng nhập vào 1 món ăn mới
+3. R: Hiển thị toàn bộ menu món ăn cho người dùng xem
+4. U: Hiển thị thông báo cho người dùng nhập vào tên món ăn muốn update => hiển thị thông báo 
+cho người dùng nhập vào tên món ăn mới
+5. D: Hiển thị thông báo cho người dùng nhập vào tên món ăn muốn xóa => Xóa món ăn đó trong ds
+
+Note: Biết rằng menu ban đầu có 3 món là: 
+let menu = ["thịt chó", "gà rang muối", "trâu gác bếp"];
+
+*/
 
