@@ -16,7 +16,7 @@ Toán tử:
 1. Toán tử gán: =
 2. Toán tử số học: +,-,*,/,% (chia lấy dư)
 3. Toán tử so sánh: >,<,>=, <=, == (So sánh tương đối), === (so sánh tuyệt đối)
-4. Toán tử logic: && (và và ), || (hoặc hoặc)
+4. Toán tử logic: && (và và ), || (hoặc hoặc), != (khác)
 5. Toán tử 3 ngôi:  (điều kiện)?"Câu lệnh 1":"Câu lệnh 2" (Tương đương if else)
 
 
@@ -87,3 +87,10 @@ Khai báo biến: let, var, const (khai báo hằng số => không thể thay đ
 // console.log(
 //   3 * 4 == 12 || 1 / 2 == 0 || 2 > 10
 // );
+
+// != : Dùng đẻ so sánh sự tương đồng
+console.log(
+  1 != '1'
+); // => false (Do về giá trị 2 KDL trên không khác nhau và đều bằng 1 => )
+
+console.log(1 !== "1"); //=> true
