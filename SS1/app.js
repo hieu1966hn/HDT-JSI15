@@ -89,8 +89,36 @@ Khai báo biến: let, var, const (khai báo hằng số => không thể thay đ
 // );
 
 // != : Dùng đẻ so sánh sự tương đồng
-console.log(
-  1 != '1'
-); // => false (Do về giá trị 2 KDL trên không khác nhau và đều bằng 1 => )
+// console.log(
+//   1 != '1'
+// ); // => false (Do về giá trị 2 KDL trên không khác nhau và đều bằng 1 => )
 
-console.log(1 !== "1"); //=> true
+// console.log(1 !== "1"); //=> true
+
+
+////// Câu điều kiện:
+/*
+if(điều kiện){
+  /// Chạy code khi điều kiện == true
+}
+else{
+ /// Chạy code khi điều kiện == false
+}
+
+
+Đề bài: Xây dựng chương trình kiểm tra năm nhuận biết
+- Năm nhuận là năm chia hết cho 4 và không chia cho 100
+- Năm nhuận là năm chia hết cho 400
+*/
+
+//// Bài chữa
+let year = Number(prompt("Người dùng nhập vào năm"));
+if (year % 4 == 0 && year % 100 != 0) {
+  console.log(`Năm ${year} là năm nhuận`);
+}
+else if (year % 400 == 0) {
+  console.log(`Năm ${year} là năm nhuận`);
+}
+else {
+  console.log(`Năm ${year} không là năm nhuận`);
+}
