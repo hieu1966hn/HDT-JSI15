@@ -112,13 +112,23 @@ else{
 */
 
 //// Bài chữa
-let year = Number(prompt("Người dùng nhập vào năm"));
-if (year % 4 == 0 && year % 100 != 0) {
-  console.log(`Năm ${year} là năm nhuận`);
-}
-else if (year % 400 == 0) {
-  console.log(`Năm ${year} là năm nhuận`);
-}
-else {
-  console.log(`Năm ${year} không là năm nhuận`);
+// let year = Number(prompt("Người dùng nhập vào năm"));
+// if (year % 4 == 0 && year % 100 != 0) {
+//   console.log(`Năm ${year} là năm nhuận`);
+// }
+// else if (year % 400 == 0) {
+//   console.log(`Năm ${year} là năm nhuận`);
+// }
+// else {
+//   console.log(`Năm ${year} không là năm nhuận`);
+// }
+
+///// Vòng lặp: While, do while, For
+/*
+VD: In ra các số từ 1 -> 10
+*/
+let i = 1;
+while (i <= 10) {
+  console.log(i);// 1, 2, ... ,10
+  i = i + 1; // Sau mỗi lần lặp thì i tăng 1 đơn vị
 }
