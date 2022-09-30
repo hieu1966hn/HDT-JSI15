@@ -127,8 +127,22 @@ else{
 /*
 VD: In ra các số từ 1 -> 10
 */
-let i = 1;
-while (i <= 10) {
-  console.log(i);// 1, 2, ... ,10
-  i = i + 1; // Sau mỗi lần lặp thì i tăng 1 đơn vị
-}
+// let i = 1;
+// while (i <= 10) { // => Kiểm tra đk trước rồi lặp
+//   console.log(i);// 1, 2, ... ,10
+//   i = i + 1; // Sau mỗi lần lặp thì i tăng 1 đơn vị
+// }
+
+/// do while: Cho phép chạy lệnh trước => Kiểm tra điều kiện sau
+// let i = 1;
+// do {
+//   console.log(i);
+//   i = i + 1;
+// }
+// while (i <= 10);
+
+/// for
+
+// for (let i = 1; i <= 10; i = i + 1) { // Vòng lặp biết trước số lần lặp
+//   console.log(i);
+// }
