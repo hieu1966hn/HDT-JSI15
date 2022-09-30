@@ -146,3 +146,29 @@ VD: In ra các số từ 1 -> 10
 // for (let i = 1; i <= 10; i = i + 1) { // Vòng lặp biết trước số lần lặp
 //   console.log(i);
 // }
+
+
+////// Mảng: Array là danh sách các phần tử trong đó các phần tử có thể là bất cứ KDL nào
+/// khai báo mảng rỗng
+let animals = ["dog", 'cat', `mouse`, "chicken"];
+
+//// Nhắc tới mảng => C,R,U,D với mảng
+
+// C: Creat Thêm phần tử vào trong mảng arr.push();
+animals.push("snake", "monkey");
+
+
+
+/// R: Read duyệt mảng => dùng lệnh console.log()
+console.log(animals);
+
+
+/// Update: Đổi snake => fish
+animals[4] = "fish"
+console.log(animals);
+
+/// Delete: xóa "mouse" (splice)
+animals.splice(2, 1)// xóa 1 phần tử ở vị trí số 2
+console.log(animals);
+
+
