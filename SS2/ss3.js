@@ -28,13 +28,31 @@ Có 1 người nữa tên là "Hiếu" đứng tên chung với Hiển sở hữ
 
 
 
-let obj = {
-  name: "John",
-  age: 24,
-  address: '22 Jump Street'
+// let obj = {
+//   name: "John",
+//   age: 24,
+//   address: '22 Jump Street'
+// }
+
+
+// ////  Sao chép đối tượng obj này vào 1 biến có tên là obj2
+// let obj2 = { ...obj }
+// console.log("obj2: ", obj2);
+
+
+//// khai báo 1 biến mới và biến này là gộp toàn bộ giá trị của 2 đối tượng khác 
+//// => Điểm chung của những đối tượng đó và các khóa mới .
+let obj1 = {
+  name: "Hiếu",
+  age: 24
+}
+
+let obj2 = {
+  name: "John Wick",
+  age: 50,
+  address: "US"
 }
 
 
-////  Sao chép đối tượng obj này vào 1 biến có tên là obj2
-let obj2 = { ...obj }
-console.log("obj2: ", obj2);
+let obj3 = Object.assign(obj1, obj2); // {name: "John Wick", age: 50, address}
+console.log("obj3: ", obj3);
