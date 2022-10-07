@@ -67,9 +67,19 @@ Yêu cầu:
 */
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]/// => 2,4,6,... 20
-//// Cách 1; Duyệt mảng với vòng lặp for
-for (let i = 0; i < arr.length; i++) {
-  arr[i] = arr[i] * 2 // 2, 4, ... 20
-}
+// let newArr = []
+// //// Cách 1; Duyệt mảng với vòng lặp for
+// for (let i = 0; i < arr.length; i++) {
+//   newArr.push(arr[i] * 2)  // 2, 4, ... 20
+// }
+// console.log(newArr);
 
-console.log(arr);
+
+//// Cách 2: Duyệt mảng + thực hành điều kiện với map => kết quả trả về của map là 1 mảng mới
+let newArr = arr.map(item => item * 2); // 2,4, .....,20
+console.log("newArr: ", newArr);
+
+
+///// In ra mảng có phần tử bên trong nhỏ hơn phần tử mảng arr ban đầu 1 giá trị là 5
+let newArr5 = arr.map(x => x - 5);// (x) => {return x-5} || x => x - 5
+console.log("newArr5: ", newArr5);
