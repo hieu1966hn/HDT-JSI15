@@ -42,17 +42,34 @@ Có 1 người nữa tên là "Hiếu" đứng tên chung với Hiển sở hữ
 
 //// khai báo 1 biến mới và biến này là gộp toàn bộ giá trị của 2 đối tượng khác 
 //// => Điểm chung của những đối tượng đó và các khóa mới .
-let obj1 = {
-  name: "Hiếu",
-  age: 24
+// let obj1 = {
+//   name: "Hiếu",
+//   age: 24
+// }
+
+// let obj2 = {
+//   name: "John Wick",
+//   age: 50,
+//   address: "US"
+// }
+
+
+// let obj3 = Object.assign(obj1, obj2); // {name: "John Wick", age: 50, address}
+// console.log("obj3: ", obj3);
+
+
+////////// Map, Filter, find, IndexOf, Includes, .... => áp dụng cho mảng
+
+/*
+Bài toán đặt ra: cho 1 mảng ban đầu: 
+Yêu cầu: 
+- In ra mảng mới có phần tử bên trong gấp đôi phần tử mảng ban đầu
+*/
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]/// => 2,4,6,... 20
+//// Cách 1; Duyệt mảng với vòng lặp for
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = arr[i] * 2 // 2, 4, ... 20
 }
 
-let obj2 = {
-  name: "John Wick",
-  age: 50,
-  address: "US"
-}
-
-
-let obj3 = Object.assign(obj1, obj2); // {name: "John Wick", age: 50, address}
-console.log("obj3: ", obj3);
+console.log(arr);
