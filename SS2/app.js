@@ -38,6 +38,13 @@ do {
     menu[viTriFoodNeedUpdate] = prompt("Mời người dùng nhập tên món ăn mới update");
 
   }
+  else if (input == "d") {
+    let foodWantDelete = prompt("Mời người dùng nhập vào tên món ăn muốn xóa");
+    /// Dùng hàm splice(vị trí bắt đầu ,số phần tử xóa , Số phần tử thêm mới ) để xóa phần tử
+    let viTriFoodWantDelete = menu.indexOf(foodWantDelete);// vị trí 
+    menu.splice(viTriFoodWantDelete, 1);
+
+  }
   else {
     alert("Chưa đúng cú pháp, mời người dùng nhập lại");
   }
