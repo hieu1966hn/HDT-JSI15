@@ -27,7 +27,15 @@ do {
     else {
       alert("Món ăn bạn vừa thêm đã có trong menu rồi")
     }
-
+  }
+  else if (input == "r") {
+    alert(`Menu món ăn là: ` + menu);
+  }
+  else if (input == 'u') {
+    let foodNeedUpdate = prompt(`Mời người dùng nhập tên món ăn muốn update biết rằng menu: ` + menu)
+    //// hàm indexOf chuyên để tìm vị trí phần tử trong mảng
+    let viTriFoodNeedUpdate = menu.indexOf(foodNeedUpdate);// 0
+    menu[viTriFoodNeedUpdate] = prompt("Mời người dùng nhập tên món ăn mới update");
 
   }
   else {
