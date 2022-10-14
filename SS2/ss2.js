@@ -120,7 +120,26 @@ let animals = [
 /*
 Bài toán: 
 1. In ra tên từng con vật trong mảng animals
-2. Lấy ra con vật nào có cân nặng < 100
-3. Lọc/lấy ra con vật nào có cân nặng nhỏ và in ra tên con vật đó.
+2. Lấy ra con vật nào có cân nặng < 100 (chỉ in ra tên)
+3. Lọc/lấy ra con vật nào có kích cỡ nhỏ và in ra tên con vật đó.
 */
+
+/// Câu 1: dùng map: Dùng để trả về 1 mảng mới sao cho từng phần tử mảng mới đã thực hiện hành động trong map
+let animalName = animals.map(item => item.name).join(", ")
+console.log(
+  animalName
+);
+
+//// Câu 2: 
+console.log(
+  animals.filter(item => item.weight < 100).map(item => item.name).join(", ")
+);
+
+
+//// Câu 3: 
+console.log(
+  animals.filter(item => item.size == "small").map(item => item.name).join(", ")
+);
+
+
 
