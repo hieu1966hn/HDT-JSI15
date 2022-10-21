@@ -19,12 +19,27 @@ Hãy lọc ra một mảng mới chứa 2 phần tử trùng nhau của 2 mảng
 
 
 /*
-Bài 02: Sử dụng map() với arr = [1,54,6,7] 
+Bài 02: Sử dụng map() với arr = [1,54,6,7]
 để tạo ra một newArr có newArr[i] = arr[i] + 5.
 
 */
-let arr = [1, 54, 6, 7]
-let newArr = arr.map(item => item + 5)
+// let arr = [1, 54, 6, 7]
+// let newArr = arr.map(item => item + 5)
+// console.log(
+//   newArr
+// );
+
+
+/*
+Cho array sau: m = [1,2,4,5,6,7]; n = [3,5,675,8,96].
+Hãy viết một hàm, duyệt cả các mảng m và n; loại bỏ đi phần tử có giá trị bằng 1, 8,10,96,7 và in ra mảng mới đó
+*/
+let m = [1, 2, 4, 5, 6, 7];
+let n = [3, 5, 675, 8, 96];
+
+let k = [...m, ...n];
+console.log("k: ", k);
+
 console.log(
-  newArr
+  k.filter(item => ![1, 8, 10, 96, 7].includes(item))
 );
