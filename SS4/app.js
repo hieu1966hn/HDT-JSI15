@@ -39,7 +39,31 @@ mảng.toString() => String
 
 //// Thực hành về OOP: Khái niệm classes: => Giống như là đang lập trình (tạo ra) 1 loài mới || 1 kiểu dữ liệu mới
 //// Khai báo 1 class NGUOi
+// class Nguoi {
+
+//   /// Định nghĩa phương thức (hàm) 
+//   walk() {
+//     alert("Tôi đang đi bộ đấy")
+//   }
+// }
+
+// //// Làm thế nào để khai báo biến có kiểu dữ liệu là Nguoi
+// let PhucHien = new Nguoi();
+// console.log("PhucHien: ", PhucHien);
+
+
+
+
+/////// Thuộc tính của classs
 class Nguoi {
+  /// Định nghĩa thuộc tính: từ khóa constructor
+  constructor(_name, _age, _address, _hobby) {
+    this.name = _name;
+    this.age = _age;
+    this.address = _address
+    this.hobby = _hobby
+  }
+
 
   /// Định nghĩa phương thức (hàm) 
   walk() {
@@ -48,8 +72,12 @@ class Nguoi {
 }
 
 //// Làm thế nào để khai báo biến có kiểu dữ liệu là Nguoi
-let PhucHien = new Nguoi();
-console.log("PhucHien: ", PhucHien);
+let PhucHien = new Nguoi("Phạm Phúc Hiển", 15, "Lâm Đồng", "Cầu Lông");
+console.log("PhucHien: ", PhucHien.address);
+
+
+///// Tính kế thừa 
+
 
 
 
