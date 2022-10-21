@@ -55,28 +55,62 @@ mảng.toString() => String
 
 
 /////// Thuộc tính của classs
-class Nguoi {
-  /// Định nghĩa thuộc tính: từ khóa constructor
-  constructor(_name, _age, _address, _hobby) {
-    this.name = _name;
-    this.age = _age;
-    this.address = _address
-    this.hobby = _hobby
-  }
+// class Nguoi {
+//   /// Định nghĩa thuộc tính: từ khóa constructor
+//   constructor(_name, _age, _address, _hobby) {
+//     this.name = _name;
+//     this.age = _age;
+//     this.address = _address
+//     this.hobby = _hobby
+//   }
 
 
-  /// Định nghĩa phương thức (hàm) 
-  walk() {
-    alert("Tôi đang đi bộ đấy")
-  }
-}
+//   /// Định nghĩa phương thức (hàm) 
+//   walk() {
+//     alert("Tôi đang đi bộ đấy")
+//   }
+// }
 
-//// Làm thế nào để khai báo biến có kiểu dữ liệu là Nguoi
-let PhucHien = new Nguoi("Phạm Phúc Hiển", 15, "Lâm Đồng", "Cầu Lông");
-console.log("PhucHien: ", PhucHien.address);
+// //// Làm thế nào để khai báo biến có kiểu dữ liệu là Nguoi
+// let PhucHien = new Nguoi("Phạm Phúc Hiển", 15, "Lâm Đồng", "Cầu Lông");
+// console.log("PhucHien: ", PhucHien.address);
 
 
 ///// Tính kế thừa 
+class Person {
+  // Thuộc tính nhận vào gồm:
+  constructor(_name, _age, _address) {
+    /// Gán giá trị cho thuộc tính của class
+    this.name = _name;
+    this.age = _age;
+    this.address = _address
+  }
+
+  say() {
+    return `I am a Person and my name is ${this.name}`
+  }
+}
+
+//// Khai báo 1 class Student kế thừa từ class Person
+class Student extends Person {
+  constructor(_name, _age, _address, _class, _idStudent) {
+    /// từ khóa kế thừa thuộc tính: super();
+    super(_name, _age, _address);
+    this.class = _class;
+    this.idStudent = _idStudent
+  }
+
+  //// Kế thừa phương thức
+  say() {
+    super.say(); // Kế thừa phương thức
+    return super.say() + ` and I am learning code from MindX School at ${this.address}`
+  }
+}
+
+
+let Hieu = new Student("Nguyễn Trung Hiếu", 18, "Hà Nội", "12a1", "001100110");
+console.log(Hieu);
+console.log(Hieu.say());
 
 
 
