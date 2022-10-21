@@ -92,26 +92,60 @@ class Person {
 }
 
 //// Khai báo 1 class Student kế thừa từ class Person
-class Student extends Person {
-  constructor(_name, _age, _address, _class, _idStudent) {
-    /// từ khóa kế thừa thuộc tính: super();
-    super(_name, _age, _address);
-    this.class = _class;
-    this.idStudent = _idStudent
+// class Student extends Person {
+//   constructor(_name, _age, _address, _class, _idStudent) {
+//     /// từ khóa kế thừa thuộc tính: super();
+//     super(_name, _age, _address);
+//     this.class = _class;
+//     this.idStudent = _idStudent
+//   }
+
+//   //// Kế thừa phương thức
+//   say() {
+//     super.say(); // Kế thừa phương thức
+//     return super.say() + ` and I am learning code from MindX School at ${this.address}`
+//   }
+// }
+
+
+// let Hieu = new Student("Nguyễn Trung Hiếu", 18, "Hà Nội", "12a1", "001100110");
+// console.log(Hieu);
+// console.log(Hieu.say());
+
+
+
+/*
+Bài 1: Khởi tạo kiểu dữ liệu hình tròn.
+Biết rằng hình tròn có thuộc tính: bánh kính hình tròn
+Yêu cầu: Xây dựng Phương thức trong KDL hình tròn như sau:
++ Tính diện tích hình tròn
++ Tính chu vi hình tròn 
+
+
+Bài 2: Khởi tạo KDL hình chữ nhật
+Biết rằng hình chữ nhật có thuộc tính truyền vào là: chiều dài, chiều rộng
+Yêu cầu: Xây dựng phương thức
++ Tính chu vi hình chữ nhật
++ Tính diện tích hình chữ nhật
+*/
+
+/// CHỮA BÀI 1
+class HinhTron {
+  constructor(bkht) {
+    this.bkht = bkht
+
   }
 
-  //// Kế thừa phương thức
-  say() {
-    super.say(); // Kế thừa phương thức
-    return super.say() + ` and I am learning code from MindX School at ${this.address}`
+  dtht() {
+    return 3.14 * this.bkht * this.bkht
+  }
+
+  cvht() {
+    return 2 * 3.14 * this.bkht
   }
 }
 
-
-let Hieu = new Student("Nguyễn Trung Hiếu", 18, "Hà Nội", "12a1", "001100110");
-console.log(Hieu);
-console.log(Hieu.say());
-
-
+let HinhTron1 = new HinhTron(5)
+console.log(HinhTron1.dtht());
 
 
