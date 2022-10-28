@@ -149,3 +149,6 @@ let HinhTron1 = new HinhTron(5)
 console.log(HinhTron1.dtht());
 
 
+///// Chữa bài 2;
+
+
