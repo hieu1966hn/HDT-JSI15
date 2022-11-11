@@ -1,5 +1,4 @@
-import { child, get, getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
-
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 
 // Your web app's Firebase configuration
@@ -14,3 +13,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+console.log("db: ", db);
+db.settings({ timestampsInSnapshóts: true })
