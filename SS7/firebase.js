@@ -15,4 +15,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 console.log("db: ", db);
-db.settings({ timestampsInSnapshóts: true })
+// db.settings({ timestampsInSnapshóts: true })
