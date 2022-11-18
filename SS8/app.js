@@ -66,7 +66,7 @@ Task1 sẽ chạy xong trước Task2
 
 
 Vậy thì để đồng bộ. Ta làm thế nào?
-- CallBack
+- C1: Xử lý bất đồng bộ với CallBack
 */
 
 //// Callback (gọi lại hàm)
@@ -83,4 +83,43 @@ Vậy thì để đồng bộ. Ta làm thế nào?
 //   }, 1000);
 // }
 // taskNo1(taskNo2);
+
+
+/////// C2: Xử lý bất đồng bộ với Promise
+/*
+Promise: có thể làm cho code của bạn dễ đọc hơn. Một dev mới có thể xem code basevà thấy rõ
+thứ tự thực thi của code.
+*/
+
+function taskNo1() {
+  setTimeout(() => {
+    return 1
+  }, 5000);
+}
+
+function taskNo2() {
+  setTimeout(() => {
+    return 2;
+  }, 1000);
+}
+
+//// xử lý bất đồng bộ
+const myPromise = new Promise(function (resolve, reject) {
+  /// code...
+  if (false) {
+    resolve("fine");
+  }
+  else {
+    reject("error")
+  }
+});
+
+myPromise.
+  then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+
 
