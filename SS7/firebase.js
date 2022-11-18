@@ -1,4 +1,4 @@
-import { collection, getDocs, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { collection, doc, getDocs, getFirestore, setDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 
@@ -59,14 +59,14 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   console.log(
-    getCafe(db)
-
+    e.target.parentElement.getAttribute("data-id")
   );
 
-  db.collection("cafes").add({
+  setDoc(doc(db, "cafes", "VietNam"), {
     name: form.name.value,
-    city: form.city.value
-  })
+    city: form.city.value,
+
+  });
 })
 
 async function getCafe(db) {
@@ -76,3 +76,21 @@ async function getCafe(db) {
   return cafeList;
 }
 
+
+
+//// Realtime listener
+db.collection("cafes")
+  .orderBy("city")
+  .onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+      console.log(change.doc.data());
+      if (change.type = "added") {
+        renderCafe(change.doc);
+      }
+      else if (change.type == "removed") {
+        let li = cafeList.querySelector("[data-id=" + change.doc.id + "]");
+        cafeList.removeChild(li);
+      }
+    })
+  })
