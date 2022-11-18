@@ -91,35 +91,57 @@ Promise: có thể làm cho code của bạn dễ đọc hơn. Một dev mới c
 thứ tự thực thi của code.
 */
 
-function taskNo1() {
-  setTimeout(() => {
-    return 1
-  }, 5000);
+
+
+// //// xử lý bất đồng bộ
+// const myPromise = new Promise(function (resolve, reject) {
+//   /// code...
+//   if (false) {
+//     resolve("fine");
+//   }
+//   else {
+//     reject("error")
+//   }
+// });
+
+// myPromise.
+//   then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+
+
+
+////// Áp dụng C2 với bài toán vừa rồi 
+// function taskNo1() {
+//   setTimeout(() => {
+//     return 1
+//   }, 5000);
+// }
+
+// function taskNo2() {
+//   setTimeout(() => {
+//     return 2;
+//   }, 1000);
+// }
+
+let doTask = async () => {
+  let result1 = await new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      resolve("Task 1")
+    }, 1000);
+  });
+
+  let result2 = await new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      resolve("Task 2")
+    }, 5000);
+  });
+
+  console.log(result1);
+  console.log(result2);
 }
-
-function taskNo2() {
-  setTimeout(() => {
-    return 2;
-  }, 1000);
-}
-
-//// xử lý bất đồng bộ
-const myPromise = new Promise(function (resolve, reject) {
-  /// code...
-  if (false) {
-    resolve("fine");
-  }
-  else {
-    reject("error")
-  }
-});
-
-myPromise.
-  then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
-
+doTask().then();
 
